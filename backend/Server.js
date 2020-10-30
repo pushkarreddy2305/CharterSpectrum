@@ -27,9 +27,9 @@ mongoose.connect(uri, { useNewUrlParser: true,useUnifiedTopology:true })
 const connection=mongoose.connection;
 connection.once('open',()=>{
     console.log("mongoose connection success");
-    // Resta.insertMany(restas);
     // City.insertMany(cities)
 });
+Resta.insertMany(restas);
 app.use('/api/products', restaRoute);
 
 app.listen(5000, ()=>{console.log('server has started')})
